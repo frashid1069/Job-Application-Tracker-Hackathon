@@ -30,7 +30,6 @@ class JobApplication(models.Model):
         ('offer', 'Offer'),
         ('rejected', 'Rejected'),
     ]
-
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=0)
     job = models.ForeignKey(Job, on_delete=models.CASCADE, default=None)
     resume = models.ForeignKey(Resume, on_delete=models.CASCADE, blank=True, null=True)
