@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import JobApplication, Job
+from .models import JobApplication, Job, Resume
 from .forms import JobApplicationForm
 from django.contrib.auth.decorators import login_required
 from django import forms
-from .serializers import JobApplicationSerializer, JobSerializer
+from .serializers import JobApplicationSerializer, JobSerializer, ResumeSerializer
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -46,6 +46,10 @@ def apply_for_job(request, job_id):
         form = JobApplicationForm()
 
     return render(request, 'apply_for_job.html', {'form': form, 'job': job})
+
+def resume_list(request):
+    resumes = Resume.objects.all()
+    return render(request, 'resume_list.html', {'resumes': resumes})
 
 class JobApplicationListView(ListView):
     model = JobApplication
@@ -89,4 +93,10 @@ class JobApplicationListAPIView(APIView):
     def get(self, request):
         job_applications = JobApplication.objects.all()
         serializer = JobApplicationSerializer(job_applications, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+class ResumeListAPIView(APIView):
+    def get(self, request):
+        resumes = Resume.objects.all()
+        serializer = ResumeSerializer(resumes, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

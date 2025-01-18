@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Job, JobApplication
+from .models import Job, JobApplication, Resume
 
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
@@ -27,3 +27,4 @@ class JobApplicationAdmin(admin.ModelAdmin):
     job_position.short_description = 'Job Position'  # Column name in the admin
 
 #admin.site.register(JobApplication, JobApplicationAdmin)
+admin.site.register(Resume)

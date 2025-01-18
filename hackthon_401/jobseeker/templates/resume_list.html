@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+{% block content %}
+  <h1>Resumes</h1>
+  <ul>
+    {% for resume in resumes %}
+      <li>
+        <a href="{% url 'resume_edit' resume.pk %}">{{ resume.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'resume_create' %}">Create New Resume</a>
+{% endblock %}
