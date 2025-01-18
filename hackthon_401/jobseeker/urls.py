@@ -18,5 +18,5 @@ urlpatterns = [
     path('<int:pk>/delete/', JobApplicationDeleteView.as_view(), name='jobapplication-delete'),
     path('api/jobs/', JobListAPIView.as_view(), name='job-list-api'),
     path('api/jobapplications/', JobApplicationListAPIView.as_view(), name='job-application-list-api'),
-    path('api/resumes/', ResumeListAPIView.as_view(), name='resume-list'),
+    path('api/resumes/', ResumeListAPIView.as_view(), name='resume-list-api'),
 ]
