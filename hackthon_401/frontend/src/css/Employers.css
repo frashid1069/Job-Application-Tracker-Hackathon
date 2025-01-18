@@ -1,0 +1,35 @@
+.Employers {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 90vh;
+  }
+  
+  .Employers h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .employers-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .employers-table th, .employers-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .employers-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .employers-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .employers-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

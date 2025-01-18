@@ -1,0 +1,80 @@
+.JobApplicationTracker {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 90vh;
+  }
+  
+  .JobApplicationTracker h2, .JobApplicationTracker h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  .application-table th, .application-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .application-table th {
+    background-color: #f2f2f2;
+    width: 20%;
+  }
+  
+  .application-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .application-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .application-table button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .application-table button:hover {
+    background-color: #0056b3;
+  }
+  
+  .edit-form {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .edit-form input, .edit-form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .edit-form button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-form button:hover {
+    background-color: #218838;
+  }
+  

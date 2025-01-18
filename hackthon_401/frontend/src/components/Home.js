@@ -1,19 +1,22 @@
 import React from 'react';
 import '../css/Home.css';
+import { Link, useNavigate } from 'react-router-dom'
 
 function Home() {
+  const navigate = useNavigate();
+  const goToApplication = () => { navigate('/job-application-tracker'); };
   return (
     <div className="Home">
       <nav className="NavigationBar">
         <div className="logo">JobSeeker</div>
         <ul>
-          <li>Job Application Tracker</li>
-          <li>Resume Builder</li>
-          <li>Employers</li>
+          <li><Link to="/job-application-tracker">Job Application Tracker</Link></li>
+          <li><Link to="/resume-builder">Resume Builder</Link></li> 
+          <li><Link to="/employers">Employers</Link></li>
           <li>More</li>
         </ul>
         <div className="auth-buttons">
-          <button>Log In</button>
+          <button onClick={goToApplication}>Log In</button>
           <button>Sign Up</button>
         </div>
       </nav>

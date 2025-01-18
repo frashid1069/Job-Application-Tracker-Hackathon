@@ -1,0 +1,41 @@
+.ResumeBuilder {
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .ResumeBuilder h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .resume-form {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .resume-form input,
+  .resume-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .resume-form button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .resume-form button:hover {
+    background-color: #218838;
+  }
+  
