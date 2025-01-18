@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from jobseeker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/jobapplications/', views.JobApplicationListAPIView.as_view(), name = 'jobapplicaions-list'),
+    path('api/jobs/', views.JobListAPIView.as_view(), name = 'job-list'),
     # path('', views.home, name='home'),
     # path('', views.index, name='index'),
     # path('api/', api_overview),

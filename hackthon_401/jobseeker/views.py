@@ -5,6 +5,10 @@ from .models import JobApplication, Job
 from .forms import JobApplicationForm
 from django.contrib.auth.decorators import login_required
 from django import forms
+from .serializers import JobApplicationSerializer, JobSerializer
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 # Custom form to dynamically set 'position' based on the selected 'job'
 class JobApplicationFormWithPosition(JobApplicationForm):
@@ -62,7 +66,7 @@ class JobApplicationCreateView(CreateView):
 class JobApplicationUpdateView(UpdateView):
     model = JobApplication
     form_class = JobApplicationFormWithPosition  # Use custom form with dynamic position handling
-    template_name = 'job_tracker/jobapplication_form.html'
+    template_name = 'jobseeker/jobapplication_form.html'
     success_url = reverse_lazy('jobapplication-list')
 
     def form_valid(self, form):
@@ -71,5 +75,18 @@ class JobApplicationUpdateView(UpdateView):
 
 class JobApplicationDeleteView(DeleteView):
     model = JobApplication
-    template_name = 'job_tracker/jobapplication_confirm_delete.html'
+    template_name = 'jobseeker/jobapplication_confirm_delete.html'
     success_url = reverse_lazy('jobapplication-list')
+
+
+class JobListAPIView(APIView):
+    def get(self, request):
+        jobs = Job.objects.all()
+        serializer = JobSerializer(jobs, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class JobApplicationListAPIView(APIView):
+    def get(self, request):
+        job_applications = JobApplication.objects.all()
+        serializer = JobApplicationSerializer(job_applications, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
