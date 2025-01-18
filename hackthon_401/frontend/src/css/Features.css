@@ -1,0 +1,20 @@
+.FeaturesSection {
+display: flex;
+justify-content: space-around;
+padding: 2rem;
+background-color: #ffffff;
+}
+
+.feature-item {
+text-align: center;
+}
+
+.feature-item img {
+width: 80px;
+height: 80px;
+margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+font-size: 1rem;
+}
