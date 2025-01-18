@@ -1,3 +1,11 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    /* background: linear-gradient(to bottom, #e0ffff, #7fffd4); */
+    overflow: hidden;
+}
+
 .home-info {
 text-align: center;
 padding: 4rem 2rem;
