@@ -1,0 +1,11 @@
+.Footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 1rem;
+}
+
+.Footer p {
+margin: 0;
+font-size: 1rem;
+}  

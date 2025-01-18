@@ -19,5 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('jobseeker.urls')),
+    # path('', views.home, name='home'),
+    # path('', views.index, name='index'),
+    # path('api/', api_overview),
 ]
