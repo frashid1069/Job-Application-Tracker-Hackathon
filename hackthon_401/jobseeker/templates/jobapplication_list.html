@@ -1,14 +1,10 @@
 {% extends "base_generic.html" %}
 {% block content %}
-<h1>Job Applications</h1>
-<a href="{% url 'jobapplication-add' %}">Add New Application</a>
-<ul>
-  {% for application in applications %}
-    <li>
-      {{ application.position }} at {{ application.company_name }}
-      (<a href="{% url 'jobapplication-edit' application.id %}">Edit</a>
-      | <a href="{% url 'jobapplication-delete' application.id %}">Delete</a>)
-    </li>
-  {% endfor %}
-</ul>
+  <h1>{{ view.title }}</h1>
+  
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Application</button>
+  </form>
 {% endblock %}

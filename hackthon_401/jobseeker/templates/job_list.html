@@ -1,0 +1,9 @@
+<!-- job_list.html -->
+<h1>Available Jobs</h1>
+<ul>
+    {% for job in jobs %}
+        <li>
+            <a href="{% url 'apply_for_job' job.id %}">{{ job.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
