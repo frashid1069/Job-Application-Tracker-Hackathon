@@ -1,4 +1,4 @@
-# CMPUT401-Hack-a-thon
+# Job-Application-Tracker-Hackathon
 
 # Backend set up
 ## Backend dependency install
